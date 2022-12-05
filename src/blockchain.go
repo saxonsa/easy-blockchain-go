@@ -1,6 +1,5 @@
 package main
 
-
 type Blockchain struct {
 	blocks []*Block
 }
@@ -12,5 +11,6 @@ func (bc *Blockchain) AddBlock(data string) {
 }
 
 func NewBlockchain() *Blockchain {
-	return &Blockchain{[]*Block{NewGenesisBlock()}}
+	return &Blockchain{
+		blocks: []*Block{NewGenesisBlock()}}
 }
